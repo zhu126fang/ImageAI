@@ -2,7 +2,7 @@
 <p>An <b>AI Commons</b> project <a href="https://commons.specpal.science" >https://commons.specpal.science </a></p>
 <hr>
 <br>
-<h3><b><u>TABLE OF CONTENTS</u></b></h3>
+<h3><b><u>目录</u></b></h3>
 <a href="#firstdetection" >&#9635 FirstObjectDetection.py</a><br>
 <a href="#objectextraction" >&#9635 物体检测，提取和微调</a><br>
 <a href="#customdetection" >&#9635 自定义对象检测</a><br>
@@ -13,8 +13,8 @@
       ImageAI提供了非常方便和强大的方法来对图像和提取进行对象检测 图像中的每个对象。 提供的对象检测类仅支持当前最先进的RetinaNet，
 而在最近的将来将支持其他对象检测网络。 要开始执行对象检测，您必须通过以下链接下载RetinaNet对象检测： <br> <br>
  <span><b>- <a href="https://github.com/OlafenwaMoses/ImageAI/releases/download/1.0/resnet50_coco_best_v2.0.1.h5" style="text-decoration: none;" >RetinaNet</a></b> <b>(Size = 145 mb) </b></span> <br><br>
- Once you download the RetinaNet model file, you should copy the model file to the your project folder where your .py files will be.
- Then create a python file and give it a name; an example is FirstObjectDetection.py. Then write the code below into the python file: <br><br>
+下载RetinaNet模型文件后，应将模型文件复制到.py文件所在的项目文件夹中。
+然后创建一个python文件并为其命名; 一个例子是FirstObjectDetection.py。 然后将下面的代码写入python文件: <br><br>
 
 <div id="firstdetection" ></div>
  <h3><b>FirstObjectDetection.py</b></h3>
@@ -77,10 +77,10 @@ detector.setModelTypeAsRetinaNet()
 detector.setModelPath( os.path.join(execution_path , "resnet50_coco_best_v2.0.1.h5"))
 detector.loadModel()
   </pre></b>
-  In the 4 lines above, we created a new instance of the <b>ObjectDetection</b> class in the first line, set the model type to RetinaNet in the second line,
-  set the model path to the RetinaNet model file we downloaded and copied to the python file folder in the third line and load the model in the
-   fourth line.
-
+  In the 4 lines above, we created a new instance of the <b>ObjectDetection</b> class in the first line, 
+在第二行将模型类型设置为RetinaNet，
+在第三行将模型路径设置为我们下载并将其复制到python文件夹中的RetinaNet模型文件。
+在第四行加载模型。
    <b><pre>
 detections = detector.detectObjectsFromImage(input_image=os.path.join(execution_path , "image2.jpg"), output_image_path=os.path.join(execution_path , "image2new.jpg"))
 
@@ -93,12 +93,9 @@ In the 2 lines above, we ran the <b>detectObjectsFromImage()</b> function and pa
  image which the function will save. Then the function returns an array of dictionaries with each dictionary corresponding
  to the number of objects detected in the image. Each dictionary has the properties <b>name</b> (name of the object) and
 <b>percentage_probability</b> (percentage probability of the detection)
-
-
 <br><br>
-
 <div id="objectextraction" ></div>
-<h3><b><u>Object Detection, Extraction and Fine-tune</u></b></h3>
+<h3><b><u>物体检测，提取和微调</u></b></h3>
 
 In the examples we used above, we ran the object detection on an image and it
 returned the detected objects in an array as well as save a new image with rectangular markers drawn
@@ -262,7 +259,7 @@ detections = detector.detectCustomObjectsFromImage(custom_objects=custom_objects
 
 
 <div id="detectionspeed"></div>
-<h3><b><u>Detection Speed</u></b></h3>
+<h3><b><u>检测速度</u></b></h3>
 <b> ImageAI </b> now provides detection speeds for all object detection tasks. The detection speeds allow you to reduce
  the time of detection at a rate between 20% - 80%, and yet having just slight changes but accurate detection
 results. Coupled with lowering the <b>minimum_percentage_probability</b> parameter, detections can match the normal
@@ -327,7 +324,7 @@ That is because there isn't any profound object in the picture. The <b>"flash"</
 
 
 <div id="inputoutputtype"></div>
-<h3><b><u>Image Input & Output Types</u></b></h3>
+<h3><b><u>图像输入&输出类型</u></b></h3>
 Previous version of <b>ImageAI</b> supported only file inputs and accepts file paths to an image for image detection.
 Now, <b>ImageAI</b> supports 3 input types of inputs which are <b>file path to image file</b>(default), <b>numpy array of image</b> and <b>image file stream</b>
 as well as 2 types of output which are image <b>file</b>(default) and numpy  <b>array </b>.
@@ -346,7 +343,7 @@ in the <b>.detectObjectsFromImage()</b> function or the <b>.detectCustomObjectsF
 <br><br>
 
 <div id="documentation" ></div>
-<h3><b><u>Documentation</u></b></h3>
+<h3><b><u>文档</u></b></h3>
 <p style="font-size: 20px;" ><b>imageai.Detection.ObjectDetection </b> class </p>
 <hr>
 <p>
