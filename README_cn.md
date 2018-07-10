@@ -1,12 +1,12 @@
-- 汉化说明
+- 汉化说明<br>
 本文采用机器翻译，供个人学习使用，内容准确性不作任何保证，谢谢。<br>
 
-- 测试环境
-Window系统测试通过(Win8.1)
-Aliyun服务其测试通过（Ubuntu16.04）
+- 测试环境<br>
+Window系统测试通过(Win8.1)<br>
+Aliyun服务其测试通过（Ubuntu16.04）<br>
 
-- 打包为wheel
-python setup.py bdist_wheel --universal
+- 打包为wheel<br>
+python setup.py bdist_wheel --universal<br>
 
 - 汉化对象名称
 文件"imageai/Detection/__init__.py" 行55 <br>
