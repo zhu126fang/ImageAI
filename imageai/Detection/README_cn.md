@@ -107,7 +107,7 @@ returned the detected objects in an array as well as save a new image with recta
    detected as a seperate image.
 
    <b>
-``` python
+<pre>
 from imageai.Detection import ObjectDetection
 
 import os
@@ -125,7 +125,7 @@ for eachObject, eachObjectPath in zip(detections, objects_path):
     print(eachObject["name"] + " : " + eachObject["percentage_probability"] )
     print("Object's image saved in " + eachObjectPath)
     print("--------------------------------")
-```
+</pre>
 
 </b>
 <br>
