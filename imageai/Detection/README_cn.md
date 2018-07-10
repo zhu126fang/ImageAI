@@ -106,10 +106,12 @@ returned the detected objects in an array as well as save a new image with recta
   In the example code below which is very identical to the previous object detction code, we will save each object
    detected as a seperate image.
 
-   <b><pre>from imageai.Detection import ObjectDetection
+   <b>
 ``` python
+from imageai.Detection import ObjectDetection
+
 import os
-```
+
 execution_path = os.getcwd()
 
 detector = ObjectDetection()
@@ -123,9 +125,9 @@ for eachObject, eachObjectPath in zip(detections, objects_path):
     print(eachObject["name"] + " : " + eachObject["percentage_probability"] )
     print("Object's image saved in " + eachObjectPath)
     print("--------------------------------")
+```
 
-</pre></b>
-
+</b>
 <br>
     <p>Sample Result:
     <br>
