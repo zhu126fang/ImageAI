@@ -107,8 +107,9 @@ returned the detected objects in an array as well as save a new image with recta
    detected as a seperate image.
 
    <b><pre>from imageai.Detection import ObjectDetection
+``` python
 import os
-
+```
 execution_path = os.getcwd()
 
 detector = ObjectDetection()
