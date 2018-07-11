@@ -1,21 +1,19 @@
 <head><meta charset="UTF-8"></head>
 
-# ImageAI : Object Detection <br>
+# ImageAI : 对象检测 <br>
 <p>An <b>AI Commons</b> project <a href="https://commons.specpal.science" >https://commons.specpal.science </a></p>
 <hr>
 <br>
 <h3><b><u>TABLE OF CONTENTS</u></b></h3>
-<a href="#firstdetection" >&#9635 First Object Detection</a><br>
-<a href="#objectextraction" >&#9635 Object Detection, Extraction and Fine-tune</a><br>
-<a href="#customdetection" >&#9635 Custom Object Detection</a><br>
-<a href="#detectionspeed" >&#9635 Detection Speed</a><br>
+<a href="#firstdetection" >&#9635 第一个物体检测</a><br>
+<a href="#objectextraction" >&#9635 物体检测，提取和微调</a><br>
+<a href="#customdetection" >&#9635 自定义对象检测</a><br>
+<a href="#detectionspeed" >&#9635 检测速度</a><br>
 <a href="#inputoutputtype" >&#9635 Image Input & Output Types</a><br>
-<a href="#documentation" >&#9635 Documentation</a><br>
+<a href="#documentation" >&#9635 文档</a><br>
 <br>
-      ImageAI provides very convenient and powerful methods to perform object detection on images and extract
-each object from the image. The object detection class provided only supports the current state-of-the-art RetinaNet,
-while other object detection networks will be supported in the nearest future. To start performing object detection,
-you must download the RetinaNet object detection via the link below: <br> <br>
+      ImageAI提供了非常方便和强大的方法来对图像和提取进行对象检测 图像中的每个对象。 提供的对象检测类仅支持当前最先进的RetinaNet，
+而在最近的将来将支持其他对象检测网络。 要开始执行对象检测，您必须通过以下链接下载RetinaNet对象检测： <br> <br>
  <span><b>- <a href="https://github.com/OlafenwaMoses/ImageAI/releases/download/1.0/resnet50_coco_best_v2.0.1.h5" style="text-decoration: none;" >RetinaNet</a></b> <b>(Size = 145 mb) </b></span> <br><br>
  Once you download the RetinaNet model file, you should copy the model file to the your project folder where your .py files will be.
  Then create a python file and give it a name; an example is FirstObjectDetection.py. Then write the code below into the python file: <br><br>
@@ -208,7 +206,7 @@ This new parameter we set to extract and save detected objects as an image will 
 <br><br>
 
 <div id="customdetection" ></div>
-<h3><b><u>Custom Object Detection</u></b></h3>
+<h3><b><u>自定义对象检测</u></b></h3>
 The object detection model (<b>RetinaNet</b>) supported by <b>ImageAI</b> can detect 80 different types of objects. They include: <br>
 <pre>
       person,   bicycle,   car,   motorcycle,   airplane,
@@ -257,11 +255,11 @@ Let us take a look at the part of the code that made this possible.
 detections = detector.detectCustomObjectsFromImage(custom_objects=custom_objects, input_image=os.path.join(execution_path , "image3.jpg"), output_image_path=os.path.join(execution_path , "image3custom.jpg"))
 
 </pre>
-In the above code, after loading the model (can be done before loading the model as well), we defined a new variable
-"<b>custom_objects = detector.CustomObjects()</b>", in which we set its car and motorcycle properties equal to <b>True</b>.
-This is to tell the model to detect only the object we set to True. Then we call the "<b>detector.detectCustomObjectsFromImage()</b>"
-which is the function that allows us to perform detection of custom objects. Then we will set the "<b>custom_objects</b>" value
- to the custom objects variable we defined.
+在上面的代码中，在加载模型之后（也可以在加载模型之前完成），我们定义了一个新变量
+"<b> custom_objects = detector.CustomObjects（）</b>"，我们将其汽车和摩托车属性设置为<b> True </b>。
+这是为了告诉模型只检测我们设置为True的对象。 然后我们称之为"<b> detector.detectCustomObjectsFromImage（）</b>"
+这是允许我们执行自定义对象检测的功能。 然后我们将设置"<b> custom_objects </b>"值
+  到我们定义的自定义对象变量。
 <br><br>
 
 
