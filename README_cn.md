@@ -14,6 +14,11 @@ python setup.py bdist_wheel --universal<br>
 文件"imageai/Detection/__init__.py" 行55 <br>
 使用中文时图片上的文字会乱码，可能是matplotlib库的问题。<br>
 
+- tensorflow版本错误
+ImportError: cannot import name 'abs' <br>
+pip3 uninstall tensorflow <br>
+pip3 install tensorflow==1.8.0 <br>
+
 # ImageAI <br>
 一个python库，旨在使开发人员能够使用简单的几行代码构建具有自包含深度学习和计算机视觉功能的应用程序和系统。<br><br>
 An <b>AI Commons</b> project <a href="https://commons.specpal.science" >https://commons.specpal.science </a>

@@ -1,4 +1,4 @@
-pip3 install tensorflow
+pip3 install tensorflow==1.8.0
 pip3 install numpy
 pip3 install scipy 
 pip3 install opencv-python
